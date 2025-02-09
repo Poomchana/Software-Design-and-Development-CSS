@@ -792,14 +792,122 @@ font-weight: bold;
 ### ผลการทดลอง
 ```html
 [วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>วิธีการเขียนบทความที่น่าสนใจ</title>
+    <link rel="stylesheet" href="styles.css"> <!-- ลิงก์ไปยังไฟล์ CSS -->
+</head>
+<body>
+    <article class="blog-post">
+        <header class="post-header">
+            <h1 class="post-title">วิธีการเขียนบทความที่น่าสนใจ</h1>
+            <div class="post-meta">โพสต์เมื่อ 1 มกราคม 2025 | โดย นายภูมิชนะ เทียมแก้ว 67030180</div>
+        </header>
+        
+        <div class="post-content">
+            <p>การเขียนบทความที่น่าสนใจต้องมีองค์ประกอบหลายอย่างที่ช่วยดึงดูดความสนใจของผู้อ่าน และทำให้เนื้อหาที่คุณเขียนมีความชัดเจนและน่าอ่านมากขึ้น ต่อไปนี้คือเคล็ดลับในการเขียนบทความที่น่าสนใจ</p>
+
+            <h2>1. การเลือกหัวข้อที่น่าสนใจ</h2>
+            <p>หัวข้อที่ดีควรตรงกับความสนใจของกลุ่มเป้าหมาย และมีประโยชน์ต่อผู้อ่าน</p>
+
+            <blockquote>
+                "การเขียนที่ดีไม่ได้เกิดจากพรสวรรค์เพียงอย่างเดียว แต่เกิดจากการฝึกฝนอย่างสม่ำเสมอ"
+            </blockquote>
+
+            <h2>2. การจัดโครงสร้างเนื้อหา</h2>
+            <p>เนื้อหาที่ดีควรมีการจัดลำดับที่เป็นระบบ เข้าใจง่าย และมีความต่อเนื่อง</p>
+
+            <h3>3. ใช้โครงสร้างที่ชัดเจน</h3>
+            <p>แบ่งบทความออกเป็นส่วนๆ เช่น บทนำ, เนื้อหา, และบทสรุป เพื่อให้ผู้อ่านสามารถติดตามได้ง่าย
+            <br>ใช้หัวข้อย่อยและย่อหน้าในการแบ่งเนื้อหาให้เป็นระเบียบ เพื่อให้ไม่รู้สึกว่าเนื้อหายาวเกินไปหรือหนักหน่วงเกินไป
+            </p>
+        </div>
+    </article>
+</body>
+</html>
+
 ```
 ```css
 [วางโค้ด CSS ที่นี่]
+/* styles.css */
+.blog-post {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    font-family: 'Sarabun', sans-serif;
+}
+
+.post-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.post-title {
+    font-family: 'Angsana New';
+    font-weight: bold;
+    font-size: 3rem;
+    color: #ff0000;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.post-meta {
+    font-family: 'Angsana New';
+    color: #000000;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.post-content {
+    font-family: 'Angsana New';
+    font-size: 1.5rem;
+    line-height: 2;
+    color: #000000;
+}
+
+.post-content p {
+    margin-bottom: 1.5rem;
+}
+
+.post-content h2 {
+    font-family: 'Angsana New';
+    font-size: 2.5rem;
+    color: #ff0000;
+    margin: 2rem 0 1rem;
+}
+
+blockquote {
+    font-family: 'Angsana New';
+    font-style: italic;
+    border-left: 4px solid #00ff95;
+    margin: 1.5rem 0;
+    padding-left: 1rem;
+    color: #555;
+}
+
+.post-content h3 {
+    font-family: 'Angsana New';
+    font-size: 2.5rem;
+    color: #ff0000;
+    margin: 2rem 0 1rem;
+}
+
+@media (max-width: 768px) {
+    .post-title {
+        font-size: 2rem;
+    }
+}
+
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
 
 [](#การทดลองที่-6-Layout-และการจัดวางอิลิเมนต์)
 ## การทดลองที่ 6: Layout และการจัดวางอิลิเมนต์
+![lab4](https://github.com/user-attachments/assets/65c9cbd2-a21a-43c9-b95e-4a57f06b384b)
 
 ### 6.1 การจัดวางด้วย Flexbox และ Grid
 
