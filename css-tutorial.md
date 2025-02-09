@@ -506,6 +506,7 @@ background-size: cover;
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
 ![lab2](https://github.com/user-attachments/assets/07df51e3-446e-409a-938f-d297be70005d)
+![image](https://github.com/user-attachments/assets/33e95b76-08d6-4be4-9ae3-4ef952485c95)
 
 [](#การทดลองที่-4-การจัดการขนาดและระยะห่าง)
 ## การทดลองที่ 4: การจัดการขนาดและระยะห่าง
