@@ -605,53 +605,12 @@ border: 1px solid black;
 [วางโค้ด HTML ที่นี่]
 ```
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <style>
-        .stats-container {
-            display: flex;
-            justify-content: space-around;
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-
-        .stat-box {
-            flex: 1;
-            margin: 0 15px;
-            padding: 2rem;
-            text-align: center;
-            background-color: rgb(9, 255, 0);
-            border-radius: 90px;
-            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
-        }
-
-        .stat-number {
-            font-size: 5rem;
-            font-weight: normal;
-            color: #ffffff;
-            margin-bottom: 2rem;
-        }
-
-        .stat-label {
-            font-size: 2rem;
-            color: #000000;
-            text-transform: capitalize;
-            letter-spacing: 2px;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .stats-container {
-                flex-direction: column;
-            }
-
-            .stat-box {
-                margin: 1rem 0;
-            }
-        }
-    </style>
-      <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stats Section</title>
+    <link rel="stylesheet" href="styles.css"> <!-- ลิงก์ไปยังไฟล์ CSS -->
 </head>
 <body>
     <div class="stats-container">
@@ -670,11 +629,57 @@ border: 1px solid black;
     </div>
 </body>
 </html>
+
 ```css
 [วางโค้ด CSS ที่นี่]
+/* styles.css */
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.stat-box {
+    flex: 1;
+    margin: 0 15px;
+    padding: 2rem;
+    text-align: center;
+    background-color: rgb(9, 255, 0); /* สีพื้นหลัง */
+    border-radius: 90px; /* มุมมน */
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1); /* เงาของกล่อง */
+}
+
+.stat-number {
+    font-size: 5rem; /* ขนาดฟอนต์ตัวเลข */
+    font-weight: normal; /* ความหนาของฟอนต์ */
+    color: #ffffff; /* สีตัวเลข */
+    margin-bottom: 2rem; /* ระยะห่างด้านล่าง */
+}
+
+.stat-label {
+    font-size: 2rem; /* ขนาดฟอนต์คำอธิบาย */
+    color: #000000; /* สีข้อความ */
+    text-transform: capitalize; /* ทำให้ตัวอักษรแรกของแต่ละคำเป็นตัวพิมพ์ใหญ่ */
+    letter-spacing: 2px; /* เพิ่มระยะห่างระหว่างตัวอักษร */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .stats-container {
+        flex-direction: column;
+    }
+
+    .stat-box {
+        margin: 1rem 0;
+    }
+}
+
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
-![image](https://github.com/user-attachments/assets/745fb2c6-4fb0-487c-90ed-9be6a9f98015)
+![lab3](https://github.com/user-attachments/assets/9bd28682-8013-40ba-8d2f-111a259e7822)
+
 
 [](#การทดลองที่-5-การจัดการข้อความและฟอนต์)
 ## การทดลองที่ 5: การจัดการข้อความและฟอนต์
