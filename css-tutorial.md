@@ -609,7 +609,7 @@ border: 1px solid black;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stats Section</title>
-    <link rel="stylesheet" href="styles.css"> <!-- ลิงก์ไปยังไฟล์ CSS -->
+    <link rel="stylesheet" href="styles.css"> 
 </head>
 <body>
     <div class="stats-container">
@@ -645,24 +645,25 @@ border: 1px solid black;
     margin: 0 15px;
     padding: 2rem;
     text-align: center;
-    background-color: rgb(9, 255, 0); /* สีพื้นหลัง */
-    border-radius: 90px; /* มุมมน */
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1); /* เงาของกล่อง */
+    background-color: rgb(9, 255, 0); 
+    border-radius: 90px; 
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1); 
 }
 
 .stat-number {
-    font-size: 5rem; /* ขนาดฟอนต์ตัวเลข */
-    font-weight: normal; /* ความหนาของฟอนต์ */
-    color: #ffffff; /* สีตัวเลข */
-    margin-bottom: 2rem; /* ระยะห่างด้านล่าง */
+    font-size: 5rem; 
+    font-weight: normal; 
+    margin-bottom: 2rem; 
 }
 
-.stat-label {
-    font-size: 2rem; /* ขนาดฟอนต์คำอธิบาย */
-    color: #000000; /* สีข้อความ */
-    text-transform: capitalize; /* ทำให้ตัวอักษรแรกของแต่ละคำเป็นตัวพิมพ์ใหญ่ */
-    letter-spacing: 2px; /* เพิ่มระยะห่างระหว่างตัวอักษร */
-}
+ .stat-label {
+            font-family: 'Angsana New';
+            font-size: 2rem;
+            color: #000000;
+            text-transform: capitalize;
+            letter-spacing: 2px;
+        }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -677,7 +678,8 @@ border: 1px solid black;
 
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
-![lab3](https://github.com/user-attachments/assets/9bd28682-8013-40ba-8d2f-111a259e7822)
+![lab3](https://github.com/user-attachments/assets/0ca46394-f414-4695-87fe-4cbecd707353)
+
 
 
 [](#การทดลองที่-5-การจัดการข้อความและฟอนต์)
@@ -907,7 +909,8 @@ blockquote {
 
 [](#การทดลองที่-6-Layout-และการจัดวางอิลิเมนต์)
 ## การทดลองที่ 6: Layout และการจัดวางอิลิเมนต์
-![lab4](https://github.com/user-attachments/assets/65c9cbd2-a21a-43c9-b95e-4a57f06b384b)
+![lab4](https://github.com/user-attachments/assets/6e8d88e6-55a2-4944-ba4e-6b6e9dd60d95)
+
 
 ### 6.1 การจัดวางด้วย Flexbox และ Grid
 
