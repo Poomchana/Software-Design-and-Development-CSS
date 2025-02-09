@@ -395,8 +395,117 @@ background-size: cover;
 ### ผลการทดลอง
 ```html
 [วางโค้ดที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    </style>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="product-container">
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/air6.jpg');"></div>
+            <div class="product-info">
+                <h2 class="product-title">iPad Air รุ่นที่ 6</h2>
+                <p class="product-price">฿49,900</p>
+                <p class="product-description">
+                    iPad Air รุ่นที่ 6 (iPad Air 6) ชิป M2, หน้าจอขนาด 13 นิ้ว, และความจุ 1TB หน้าจอ Liquid Retina ขนาด 13 นิ้ว มีความละเอียด 2732 x 2048 พิกเซล ให้ภาพที่คมชัดและสีสันสดใส 
+                </p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/air5.png');"></div>
+            <div class="product-info">
+                <h2 class="product-title">iPad Air รุ่นที่ 5</h2>
+                <p class="product-price">฿20,900</p>
+                <p class="product-description">
+                    iPad Air รุ่นที่ 5 (iPad Air 5) ชิป M1 และ ความจุ 256GB หน้าจอ Liquid Retina ขนาด 10.9 นิ้ว ที่มีความละเอียด 2360 x 1640 พิกเซล รองรับ True Tone และขอบเขตสีกว้าง P3 ทำให้ภาพที่แสดงมีความสวยงามและคมชัด
+                </p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/gen10.jpg');"></div>
+            <div class="product-info">
+                <h2 class="product-title">iPad Gen รุ่นที่ 10</h2>
+                <p class="product-price">฿17,900</p> 
+                <p class="product-description">
+                    iPad Gen รุ่นที่ 10 (iPad Gen 10) ชิป A14 Bionic ความจุ 256GB หน้าจอ: มีหน้าจอ 10.9 นิ้ว Liquid Retina (2360 x 1640 พิกเซล) ที่ให้สีสันสดใสและคมชัด รองรับ True Tone และ P3 Wide Color
+                </p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('images/iphone.png');"></div>
+            <div class="product-info">
+                <h2 class="product-title">iPhone 16 Pro Max</h2>
+                <p class="product-price">฿48,900</p>
+                <p class="product-description">
+                    iPhone 16 Pro Max ชิป A18 Bionic Chip น้าจอ Super Retina XDR OLED ขนาด 6.7 นิ้ว ที่มีความละเอียด 2796 x 1290 พิกเซล รองรับ ProMotion ที่สามารถปรับรีเฟรชเรตได้สูงสุด 120Hz และรองรับ HDR10 และ Dolby Visio
+                </p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<style>
+    .product-card {
+        width: 300px;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        background-color: white;
+    }
+
+    .product-image {
+        width: 100%;
+        height: 200px;
+        background-image: url('product.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .product-info {
+        padding: 15px;
+    }
+
+    .product-title {
+        color: #333;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .product-price {
+        color: #007bff;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .product-description {
+        color: #666;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .product-button {
+        display: block;
+        background: linear-gradient(to right, #007bff, #0056b3);
+        color: white;
+        text-align: center;
+        padding: 10px;
+        text-decoration: none;
+        margin-top: 15px;
+        border-radius: 4px;
+    }
+
+    .product-button:hover {
+        background: linear-gradient(to right, #0056b3, #003980);
+    }
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![lab2](https://github.com/user-attachments/assets/07df51e3-446e-409a-938f-d297be70005d)
 
 [](#การทดลองที่-4-การจัดการขนาดและระยะห่าง)
 ## การทดลองที่ 4: การจัดการขนาดและระยะห่าง
