@@ -233,8 +233,64 @@ div > p {
 ### ผลการทดลอง
 ```html
 [วางโค้ดที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* การใช้ Element Selector */
+        nav {
+            background-color: #eeff03;
+            padding: 15px;
+        }
+
+        /* การใช้ Descendant Selector */
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        /* การใช้ Child Selector */
+        nav > ul > li {
+            margin: 0 10px;
+        }
+
+        /* การใช้ Class Selector */
+        .menu-item {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+
+        /* การใช้ Pseudo-class */
+        .menu-item:hover {
+            background-color: #555;
+            border-radius: 3px;
+        }
+
+        /* การใช้ ID Selector */
+        #active {
+            background-color: #ff0000;
+            border-radius: 3px;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item" id="active" >สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![1](https://github.com/user-attachments/assets/e87defb4-c242-4cfe-9cef-5242928a4753)
 
 
 [](#การทดลองที่-3-การจัดการสีและพื้นหลัง)
