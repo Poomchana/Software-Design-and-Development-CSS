@@ -603,7 +603,6 @@ border: 1px solid black;
 ### ผลการทดลอง
 ```html
 [วางโค้ด HTML ที่นี่]
-```
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -632,7 +631,6 @@ border: 1px solid black;
 
 ```css
 [วางโค้ด CSS ที่นี่]
-```
 /* styles.css */
 .stats-container {
     display: flex;
