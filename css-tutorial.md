@@ -1092,7 +1092,7 @@ blockquote {
 ```
 ```css
 [วางโค้ด CSS ที่นี่]
-/* styles.css */
+<link rel="stylesheet" href="style.css">
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -1315,9 +1315,258 @@ blockquote {
 ### ผลการทดลอง
 ```html
 [วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css"> <!-- ลิงก์ไฟล์ CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <header class="header">
+            <h1>Dashboard</h1>
+            <nav>
+                <button>โปรไฟล์</button>
+                <button>ออกจากระบบ</button>
+            </nav>
+        </header>
+
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li>หน้าแรก</li>
+                    <li>รายงาน</li>
+                    <li>การตั้งค่า</li>
+                    <li><a href="css2.html">ร้านค้า</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>ยอดขายรวม</h3>
+                    <p>฿2,521,299</p>
+                </div>
+                <div class="stat-card">
+                    <h3>จำนวนออเดอร์</h3>
+                    <p>51,000</p>
+                </div>
+                <div class="stat-card">
+                    <h3>ลูกค้าใหม่</h3>
+                    <p>1,324</p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart">
+                    <h3>กราฟแสดงยอดขาย</h3>
+                    <canvas id="salesChart"></canvas>
+                </div>
+                <div class="chart">
+                    <h3>สัดส่วนสินค้าขายดี</h3>
+                    <canvas id="salesPieChart"></canvas>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const salesChartCtx = document.getElementById('salesChart').getContext('2d');
+        const salesChart = new Chart(salesChartCtx, {
+            type: 'line', 
+            data: {
+                labels: ['สิงหาคม', 'กันยายน', 'ตุลาคม', 'พฤศจิกายน', 'ธันวาคม'], 
+                datasets: [{
+                    label: 'ยอดขาย',
+                    data: [500000, 600500, 700000, 1005000, 2521299], 
+                    borderColor: '#3498db',
+                    backgroundColor: 'rgba(52, 152, 219, 0.2)',
+                    borderWidth: 2,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        ticks: {
+                            callback: function(value) {
+                                return '฿' + value.toLocaleString(); 
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        const salesPieChartCtx = document.getElementById('salesPieChart').getContext('2d');
+        const salesPieChart = new Chart(salesPieChartCtx, {
+            type: 'pie', 
+            data: {
+                labels: ['iPhone 16 Pro Max', 'iPad Air 6', 'iPad Gen 10', 'MacBook Pro'], 
+                datasets: [{
+                    label: 'สัดส่วนสินค้าขายดี',
+                    data: [40, 30, 20, 10], 
+                    backgroundColor: ['#3498db', '#2ecc71', '#f39c12', '#e74c3c'],
+                    borderColor: '#fff',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+    </script>
+</body>
+</html>
+
 ```
 ```css
 [วางโค้ด CSS ที่นี่]
+/* กำหนดฟอนต์ */
+<link rel="stylesheet" href="style.css">
+.dashboard {
+    font-family: 'Arial';
+    display: grid;
+    grid-template-areas: 
+        "sidebar header"
+        "sidebar main";
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    background: #3498db;
+    color: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.25rem;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.header nav button {
+    background: #000000;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.header nav button:hover {
+    background: #3498db;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background: #000033;
+    color: white;
+    padding: 1rem;
+}
+
+.sidebar nav ul li {
+    margin: 1rem 0;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+    background: none;
+}
+
+.sidebar nav ul li:hover {
+    background: #34495e;
+}
+
+.sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem;
+}
+
+.main-content {
+    grid-area: main;
+    padding: 2rem;
+    background: #f5f7fa;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.stat-card h3 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.stat-card p {
+    font-size: 1.5rem;
+    color: #00CC00;
+}
+
+.chart-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.chart {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .dashboard {
+        grid-template-areas: 
+            "header"
+            "main";
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .chart-container {
+        grid-template-columns: 1fr;
+    }
+
+    .header h1 {
+        font-size: 1.5rem;
+    }
+
+    .header nav button {
+        padding: 0.3rem 0.8rem;
+    }
+}
+
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![lab7](https://github.com/user-attachments/assets/08fde6ed-fb94-4691-b7ab-17e1451bcb1b)
 
